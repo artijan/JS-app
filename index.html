@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ToDo Page Project</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/ed35ff9bbd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bigBox">
+      <div class="box">
+        <div class="box__child">
+          <div class="js-clock">
+            <h1>00:00</h1>
+          </div>
+
+          <!-- 사용자 이름을 입력 받고, greeting.js로 데이터 값을 호출받아 넘겨줌-->
+          <form class="js-form form">
+            <input type="text" placeholder="What is your name?" />
+          </form>
+          <h4 class="js-greetings greetings"></h4>
+
+          <form class="js-toDoForm">
+            <input type="text" placeholder="오늘 할 일을 적어봐!" />
+          </form>
+
+          <ul class="js-toDoList"></ul>
+        </div>
+      </div>
+      <div class="gradient">
+        <div class="gradient_boxText">gradient</div>
+      </div>
+      <div class="secondBox">
+        <span class="js-weather"></span>
+        <span class="js-designer">Designed by Artijan</span>
+      </div>
+    </div>
+
+    <!-- clock / greetings / todo / background / weather 각 기능을 맡는 js 파일을 연결 -->
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="background.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

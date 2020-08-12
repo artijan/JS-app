@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+@keyframes toDoInputAnim {
+  from {
+    opacity: 0;
+    width: 10px;
+  }
+  to {
+    opacity: 1;
+    width: 350px;
+  }
+}
+
+.bigBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  z-index: 2;
+  color: white;
+  width: 280px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid #3a539b;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+input::placeholder {
+  color: white;
+  text-shadow: 1px 1px 7px #24252a;
+}
+
+input[type="text"]:focus {
+  animation: toDoInputAnim 0.7s ease-in-out forwards;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+body {
+  color: floralwhite;
+
+  transition: color 0.5s ease-in-out;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.clicked {
+  color: #7f8c8d;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    border-style: none;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s ease-out;
+}
+
+.box {
+  list-style-type: none;
+}
+
+.box__child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.box__child > .js-clock {
+  margin-top: 200px;
+
+  background-color: white;
+  box-shadow: 0px 0px 8px #34495e;
+
+  font-size: 100px;
+  color: #013243;
+
+  padding: 0px 50px;
+  border-radius: 30px;
+}
+
+.box__child > .js-greetings {
+  color: floralwhite;
+  margin-top: 50px;
+  padding-top: 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 1px 1px 7px #24252a;
+}
+
+.box__child > .js-toDoList {
+  text-align: left;
+  color: floralwhite;
+  font-size: 25px;
+  text-shadow: 1px 1px 7px #24252a;
+}
+
+.secondBox {
+  padding-left: 15px;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-start;
+  bottom: 0px;
+}
+.secondBox .js-weather {
+  color: white;
+  text-shadow: 1px 1px 7px #24252a;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.secondBox .js-designer {
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 7px #24252a;
+  font-size: 20px;
+  font-weight: 300;
+  right: 0;
+  margin-right: 30px;
+}
+
+.gradient {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+.gradient_boxText {
+  z-index: -1;
+  opacity: 0;
+}
